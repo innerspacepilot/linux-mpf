@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.3.0-pf3 Kernel Configuration
+# Linux/x86 5.3.8-pf8 Kernel Configuration
 #
 
 #
@@ -432,6 +432,9 @@ CONFIG_X86_SMAP=y
 CONFIG_X86_INTEL_UMIP=y
 # CONFIG_X86_INTEL_MPX is not set
 CONFIG_X86_INTEL_MEMORY_PROTECTION_KEYS=y
+CONFIG_X86_INTEL_TSX_MODE_OFF=y
+# CONFIG_X86_INTEL_TSX_MODE_ON is not set
+# CONFIG_X86_INTEL_TSX_MODE_AUTO is not set
 CONFIG_EFI=y
 CONFIG_EFI_STUB=y
 # CONFIG_EFI_MIXED is not set
@@ -2239,7 +2242,6 @@ CONFIG_WLAN_VENDOR_ADMTEK=y
 # CONFIG_ADM8211 is not set
 CONFIG_ATH_COMMON=m
 CONFIG_WLAN_VENDOR_ATH=y
-# CONFIG_ATH_USER_REGD is not set
 # CONFIG_ATH_DEBUG is not set
 # CONFIG_ATH5K is not set
 # CONFIG_ATH5K_PCI is not set
@@ -3871,7 +3873,6 @@ CONFIG_USB_SERIAL_OPTION=m
 # CONFIG_USB_EMI26 is not set
 # CONFIG_USB_ADUTUX is not set
 # CONFIG_USB_SEVSEG is not set
-# CONFIG_USB_RIO500 is not set
 # CONFIG_USB_LEGOTOWER is not set
 # CONFIG_USB_LCD is not set
 # CONFIG_USB_CYPRESS_CY7C63 is not set
