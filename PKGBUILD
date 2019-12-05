@@ -1,8 +1,8 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 _major=5
-_minor=3
+_minor=4
 _basekernel=${_major}.${_minor}
-_pfrel=8
+_pfrel=2
 pkgbase=linux-mpf
 pkgver=5.3.${_pfrel}
 pkgrel=1
@@ -29,9 +29,9 @@ validpgpkeys=(
   '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
-sha256sums=('78f3c397513cf4ff0f96aa7d09a921d003e08fa97c09e0bb71d88211b40567b2'
+sha256sums=('bf338980b1670bca287f9994b7441c2361907635879169c64ae78364efc5f491'
             '2b1f0bfea181f982559a7a47857a788f2a870fd775e607ceb8a3fb11299ef5ee'
-            '3b30d93b6e15c949f55c154945d8b396469afea30271ac3b3a042ebe70baf482')
+            'f4713c2fc74890ab1523601021d804be15afd15d8e84ec96e0dfde449bf6d26a')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
