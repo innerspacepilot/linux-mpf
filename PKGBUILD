@@ -23,8 +23,6 @@ _srcname=linux-${_basekernel}
 source=("https://www.kernel.org/pub/linux/kernel/v${_major}.x/linux-${_basekernel}.tar.xz"
 	      'config.ACE'
 	      "${_pfpatchhome}/${_pfpatchname}"	# the -pf patchset
-        "90-linux.hook"
-        "60-linux.hook"
        )
 validpgpkeys=(
   'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
@@ -33,9 +31,7 @@ validpgpkeys=(
 )
 sha256sums=('78f3c397513cf4ff0f96aa7d09a921d003e08fa97c09e0bb71d88211b40567b2'
             '2b1f0bfea181f982559a7a47857a788f2a870fd775e607ceb8a3fb11299ef5ee'
-            '3b30d93b6e15c949f55c154945d8b396469afea30271ac3b3a042ebe70baf482'
-            '75f99f5239e03238f88d1a834c50043ec32b1dc568f2cc291b07d04718483919'
-            'ae2e95db94ef7176207c690224169594d49445e04249d2499e9d2fbc117a0b21')
+            '3b30d93b6e15c949f55c154945d8b396469afea30271ac3b3a042ebe70baf482')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -66,7 +62,7 @@ prepare() {
 
 build() {
   cd $_srcname
-  make bzImage modules
+  make bzImage modules htmldocs
 }
 
 _package() {
