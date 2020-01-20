@@ -2,7 +2,7 @@
 _major=5
 _minor=4
 _basekernel=${_major}.${_minor}
-_pfrel=2
+_pfrel=6
 pkgbase=linux-mpf
 pkgver=5.3.${_pfrel}
 pkgrel=1
@@ -30,8 +30,8 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('bf338980b1670bca287f9994b7441c2361907635879169c64ae78364efc5f491'
-            '2b1f0bfea181f982559a7a47857a788f2a870fd775e607ceb8a3fb11299ef5ee'
-            'f4713c2fc74890ab1523601021d804be15afd15d8e84ec96e0dfde449bf6d26a')
+            'a29faea146af2ca301d79b9e17e18c29cf1cd199c9a3f8418744f1bdcdb3df23'
+            '93b7de4da23aa194e31b7d3ae95f199ef04926e709bc22c4e8453c781ff0f58c')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -62,7 +62,7 @@ prepare() {
 
 build() {
   cd $_srcname
-  make bzImage modules htmldocs
+  make bzImage modules
 }
 
 _package() {
