@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.4.2-mpf2 Kernel Configuration
+# Linux/x86 5.4.6-mpf6 Kernel Configuration
 #
 
 #
@@ -20,8 +20,6 @@ CONFIG_THREAD_INFO_IN_TASK=y
 #
 # General setup
 #
-CONFIG_SCHED_BMQ=y
-CONFIG_SCHED_TIMESLICE=4
 CONFIG_INIT_ENV_ARG_LIMIT=32
 # CONFIG_COMPILE_TEST is not set
 # CONFIG_HEADER_TEST is not set
@@ -141,6 +139,8 @@ CONFIG_HAVE_UNSTABLE_SCHED_CLOCK=y
 #
 # Scheduler features
 #
+CONFIG_SCHED_BMQ=y
+CONFIG_SCHED_TIMESLICE=4
 # end of Scheduler features
 
 CONFIG_ARCH_SUPPORTS_NUMA_BALANCING=y
@@ -4668,7 +4668,7 @@ CONFIG_HUGETLB_PAGE=y
 CONFIG_MEMFD_CREATE=y
 CONFIG_ARCH_HAS_GIGANTIC_PAGE=y
 CONFIG_CONFIGFS_FS=m
-# CONFIG_EFIVAR_FS is not set
+CONFIG_EFIVAR_FS=y
 # end of Pseudo filesystems
 
 CONFIG_MISC_FILESYSTEMS=y

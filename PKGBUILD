@@ -14,7 +14,7 @@ license=(GPL2)
 makedepends=(
   bc kmod libelf
   xmlto python-sphinx python-sphinx_rtd_theme graphviz imagemagick
-  git
+  git cpio
 )
 _pfpatchhome="https://github.com/pfactum/pf-kernel/compare"
 _pfpatchname="v$_major.$_minor...v$_major.$_minor-pf$_pfrel.diff"
@@ -30,7 +30,7 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('bf338980b1670bca287f9994b7441c2361907635879169c64ae78364efc5f491'
-            'a29faea146af2ca301d79b9e17e18c29cf1cd199c9a3f8418744f1bdcdb3df23'
+            'ec573bdb657f86ea80e35284a6942c03d2edfcb0993daea4ea87f54a388588b4'
             '93b7de4da23aa194e31b7d3ae95f199ef04926e709bc22c4e8453c781ff0f58c')
 
 export KBUILD_BUILD_HOST=archlinux
