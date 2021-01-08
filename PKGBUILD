@@ -1,14 +1,14 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 _major=5
-_minor=9
+_minor=10
 _basekernel=${_major}.${_minor}
-_pfrel=7
+_pfrel=6
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
 pkgdesc='Linux MPF'
 _srctag=v${pkgver%.*}-${pkgver##*.}
-url="https://git.archlinux.sorg/ linux.git/log/?h=$_srctag"
+url="https://git.archlinux.sorg/linux.git/log/?h=$_srctag"
 arch=(x86_64)
 license=(GPL2)
 makedepends=(
@@ -20,7 +20,7 @@ _pfpatchhome="https://github.com/pfactum/pf-kernel/compare"
 _pfpatchname="v$_major.$_minor...v$_major.$_minor-pf$_pfrel.diff"
 options=('!strip')
 _srcname=linux-${_basekernel}
-source=("https://www.kernel.org/pub/linux/kernel/v${_major}.x/linux-${_basekernel}.tar.xz"
+source=("https://www.kernel.org/pub/linux/kernel/v${_major}.x/linux-${_basekernel}.tar.gz"
 	      'config.ACE'
 	      "${_pfpatchhome}/${_pfpatchname}"	# the -pf patchset
        )
@@ -29,9 +29,9 @@ validpgpkeys=(
   '647F28654894E3BD457199BE38DBBDC86092693E'  # Greg Kroah-Hartman
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
-sha256sums=('3239a4ee1250bf2048be988cc8cb46c487b2c8a0de5b1b032d38394d5c6b1a06'
+sha256sums=('91169da4618d182599963926cad0256bcf6f5c74bac47b24c199374539323e64'
             '01ab129185cf083ad4b7848dac754650fc0517877ccfa1e5401bed9bc1b341fd'
-            'b355f7e30127e5123a87d2052b4d0cc9d7b5d56e974bc0b625da957c638a1ad0')
+            '51fbc957e15fe7e7a59442fb895d51442801fbf1d67ca91b3f801e916b6ff991')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
