@@ -1,5 +1,6 @@
 /linux-*.tar.xz
-/linux-mpf-*.pkg.tar.zstd
+/linux-*.tar.gz
+/linux-mpf-*.pkg.tar.zst
 /pkg
 /src
 /v*.diff
