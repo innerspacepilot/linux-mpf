@@ -2,7 +2,7 @@
 _major=5
 _minor=15
 _basekernel=${_major}.${_minor}
-_pfrel=2
+_pfrel=6
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
@@ -31,7 +31,7 @@ validpgpkeys=(
 )
 sha256sums=('4d7908da75ad50a70a0141721e259c2589b7bdcc317f7bd885b80c2ffa689211'
             '73a8c096d1ae92e257f48520a50106e24f4bf988fca8f70110dfa5d6b9d59ebd'
-            '9281cae0b5f3864c56bc2b668b1fe0021926cf88ef22289638584af6870f9cec')
+            '91345ddc29e35a0f770413c593e6e026e2bf90a38bef09a157cad29d501e6d92')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -194,7 +194,7 @@ _package-docs() {
   ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
 }
 
-pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
+pkgname=("$pkgbase" "$pkgbase-headers")
 for _p in "${pkgname[@]}"; do
   eval "package_$_p() {
     $(declare -f "_package${_p#$pkgbase}")
