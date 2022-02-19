@@ -2,7 +2,7 @@
 _major=5
 _minor=16
 _basekernel=${_major}.${_minor}
-_pfrel=3
+_pfrel=4
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
@@ -31,7 +31,7 @@ validpgpkeys=(
 )
 sha256sums=('d4791f2eddeb25c4e6ae0b2f9b3f5fb3fd394d7f9a57fa3e33de6dd9761480f6'
             '73a8c096d1ae92e257f48520a50106e24f4bf988fca8f70110dfa5d6b9d59ebd'
-            '6b8d6d92f748e8faf43f8f414e3fa7f4475a7dac0486a4d9f6bf4248ebfaf8a7')
+            '84515dd944b87062b47c8c0c8fe0446c4a807fa4da5e45346c17cbe0f7e77551')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
@@ -65,7 +65,6 @@ prepare() {
 build() {
   cd $_srcname
   make all
-  make htmldocs
 }
 
 _package() {
@@ -173,25 +172,6 @@ _package-headers() {
   echo "Adding symlink..."
   mkdir -p "$pkgdir/usr/src"
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
-}
-
-_package-docs() {
-  pkgdesc="Documentation for the $pkgdesc kernel"
-
-  cd $_srcname
-  local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
-
-  echo "Installing documentation..."
-  local src dst
-  while read -rd '' src; do
-    dst="${src#Documentation/}"
-    dst="$builddir/Documentation/${dst#output/}"
-    install -Dm644 "$src" "$dst"
-  done < <(find Documentation -name '.*' -prune -o ! -type d -print0)
-
-  echo "Adding symlink..."
-  mkdir -p "$pkgdir/usr/share/doc"
-  ln -sr "$builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
 }
 
 pkgname=("$pkgbase" "$pkgbase-headers")
