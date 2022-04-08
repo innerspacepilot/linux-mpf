@@ -2,7 +2,7 @@
 _major=5
 _minor=16
 _basekernel=${_major}.${_minor}
-_pfrel=4
+_pfrel=6
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
@@ -31,7 +31,7 @@ validpgpkeys=(
 )
 sha256sums=('d4791f2eddeb25c4e6ae0b2f9b3f5fb3fd394d7f9a57fa3e33de6dd9761480f6'
             '8ff85a56f92dd532eadf1e14d304069ebb305dbdc28b549f71d0d15fc769af64'
-            '84515dd944b87062b47c8c0c8fe0446c4a807fa4da5e45346c17cbe0f7e77551')
+            '1793c055b622aa63fe912a2af53c0d3790391a7ab907ba9d5460109343b2b3b6')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
