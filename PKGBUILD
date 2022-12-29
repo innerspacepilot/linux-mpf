@@ -2,7 +2,7 @@
 _major=6
 _minor=0
 _basekernel=${_major}.${_minor}
-_pfrel=4
+_pfrel=6
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
