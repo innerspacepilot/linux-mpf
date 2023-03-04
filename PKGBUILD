@@ -1,8 +1,8 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 _major=6
-_minor=0
+_minor=2
 _basekernel=${_major}.${_minor}
-_pfrel=6
+_pfrel=2
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
@@ -29,7 +29,7 @@ validpgpkeys=(
   '8218F88849AAC522E94CF470A5E9288C4FA415FA'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('SKIP'
-            '5ef2808c9e4319fe5eba0e22ecbcb2bb65585e581d23aaf2b9d545c2e12b100b')
+            '6551439c734fbea2c8c70c1905ad6d3db9ef4e12dee22db9ea894232f419d427')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
