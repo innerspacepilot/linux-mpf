@@ -1,8 +1,8 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 _major=6
-_minor=6
+_minor=7
 _basekernel=${_major}.${_minor}
-_pfrel=4
+_pfrel=5
 pkgbase=linux-mpf
 pkgver=${_major}.${_minor}.${_pfrel}
 pkgrel=1
